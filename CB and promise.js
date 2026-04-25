@@ -1,7 +1,7 @@
 function fetchDataWithCallback(callback) {
   setTimeout(() => {
     let data = "https://fakestoreapi.com/products/1";
-    callback (data);
+    callback(data);
   }, 1000);
 }
 
