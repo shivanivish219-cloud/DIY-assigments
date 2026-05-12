@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calulator</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  const calculator = () => {
+    let result = 0;
+
+    const add = (num) => {
+      result = result + num;
+      return result;
+    };
+
+    return add;
+  };
+
+  const addFunc = calculator();
+
+  console.log("Add 2 : ", addFunc(2)); // 2
+  console.log("Add 20 : ", addFunc(20)); // 22
+  console.log("Add 1 : ", addFunc(1)); // 23
+  console.log("Add 290 : ", addFunc(290)); // 213
+</script>
+
+<script>
+  const calculator2 = () => {
+    let result = 50;
+
+    const Sub = (num) => {
+      result = result - num;
+      return result;
+    };
+
+    return Sub;
+  };
+
+  const addFunc2 = calculator2();
+
+  console.log("Sub 5 : ", addFunc2(5));
+  console.log("Sub 20 : ", addFunc2(20));
+  console.log("Sub 1 : ", addFunc2(1));
+  console.log("Sub 14 : ", addFunc2(14));
+</script>

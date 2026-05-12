@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This in Object</title>
+  </head>
+
+  <body></body>
+</html>
+<script>
+  // global variables
+  var uName = "Abhishek";
+  var city = "Morena";
+
+  const profile = {
+    uName: "Rakshit",
+    city: "Udaipur",
+    education: {
+      isGraduated: true,
+      isPostGraduated: false,
+    },
+    getName: function () {
+      console.log("This inside getName: ", this);
+      return `Hello ${this.uName} from ${this.city}`;
+    },
+    getNameArrow: () => {
+      console.log("This inside getNameArrow: ", this);
+
+      return `Hello ${this.uName} from ${this.city}`;
+    },
+    getEducation: function () {
+      return `${this.uName}, You're ${this.education.isGraduated ? "Graduated" : "Not Graduated"}`;
+    },
+    getEducationArrow: () => {
+      return `${this.uName}, You're ${this.education.isGraduated ? "Graduated" : "Not Graduated"}`;
+    },
+  };
+
+  console.log("Profile.uName: ", profile.uName);
+  console.log("Profile.getName normal: ", profile.getName());
+  console.log("Profile.getEducation normal: ", profile.getEducation());
+
+  console.log("Profile.getNameArrow: ", profile.getNameArrow());
+  // console.log("Profile.getEducationArrow: ", profile.getEducationArrow());
+</script>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>closer</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function greetings() {
+    let Name = "rohan";
+    let city = "indore";
+    let educate = "yes";
+
+    function innerFunction() {
+      let state = "MP";
+      console.log("state: ", state);
+      console.log("Name: ", Name);
+    }
+
+    const innerFunc = () => {
+      let Country = "india";
+      console.log("Country:", Country);
+      console.log("Name:", Name);
+    };
+
+    function innerFunction2() {
+      let education = "graduate";
+      console.log("education:", education);
+      console.log("Name: ", Name);
+    }
+
+    innerFunc();
+    innerFunction();
+    innerFunction2();
+  }
+  greetings();
+</script>
