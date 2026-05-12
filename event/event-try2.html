@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>try event</title>
+  </head>
+  <style>
+    #ha {
+      border: 2px solid black;
+    }
+    .box {
+      padding: 16px;
+      margin-top: 10px;
+      border: 1px solid #999;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .head {
+      background: #b48989;
+    }
+    .legs {
+      background: #9fe9af;
+    }
+    .nose {
+      background: #e1e784;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <div class="box head" data-named="head">
+        box1
+        <div class="box legs" data-named="legs">
+          box2
+          <div class="box nose" data-named="nose">box3</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const container = document.getElementById("container");
+
+  //   // Single event listener (Delegation)
+  container.addEventListener("click", function (event) {
+    console.log("Event:", event.target, event.target.dataset.name);
+  });
+</script>
+
+<script>
+  // Parent element
+  const container2 = document.getElementById("container");
+
+  // Single event listener (Delegation)
+  container2.addEventListener("click", function (event) {
+    const clickedElement = event.target.closest(".box");
+
+    // Safety check
+    if (!clickedElement) return;
+
+    console.log(`${clickedElement.dataset.name} clicked`);
+  });
+</script>
